@@ -16,10 +16,10 @@
     --border-bright: rgba(255,255,255,0.15);
     --accent: #7DF9AA;
     --accent2: #4DC8FF;
-    --accent3: #FF6B9D;
-    --pink: #FF6B9D;
-    --pink-soft: rgba(255,107,157,0.12);
-    --pink-glow: rgba(255,107,157,0.35);
+    --accent3: #4DC8FF;
+    --pink: #4DC8FF;
+    --pink-soft: rgba(77,200,255,0.12);
+    --pink-glow: rgba(77,200,255,0.35);
     --text: #e8eaf0;
     --muted: #6b7280;
     --heading-font: 'DM Serif Display', serif;
@@ -51,7 +51,7 @@
   .cursor-ring {
     position: fixed; top: 0; left: 0; pointer-events: none; z-index: 9998;
     width: 36px; height: 36px; border-radius: 50%;
-    border: 1px solid rgba(255,107,157,0.4);
+    border: 1px solid rgba(77,200,255,0.4);
     transform: translate(-50%, -50%);
     transition: transform 0.15s cubic-bezier(.23,1,.32,1), width 0.3s, height 0.3s, opacity 0.3s;
   }
@@ -136,7 +136,7 @@
   .hero-name em {
     font-style: italic;
     color: transparent;
-    -webkit-text-stroke: 1px var(--pink);
+    -webkit-text-stroke: 1px var(--accent2);
   }
   .hero-desc {
     max-width: 560px;
@@ -303,7 +303,7 @@
     overflow: hidden;
     transition: background 0.3s, border-color 0.3s;
   }
-  .project-card:hover { background: rgba(255,107,157,0.03); border-color: rgba(255,107,157,0.18); }
+  .project-card:hover { background: rgba(77,200,255,0.03); border-color: rgba(77,200,255,0.18); }
   .project-card::before {
     content: '';
     position: absolute; top: 0; left: 0; right: 0; height: 1px;
@@ -316,7 +316,7 @@
   .project-number {
     font-family: var(--mono);
     font-size: 10px;
-    color: rgba(255,107,157,0.35);
+    color: rgba(77,200,255,0.35);
     letter-spacing: 0.15em;
     margin-bottom: 1.5rem;
   }
@@ -910,11 +910,11 @@
   document.querySelectorAll('a, button, .project-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
       ring.style.width = '56px'; ring.style.height = '56px';
-      ring.style.borderColor = 'rgba(255,107,157,0.7)';
+      ring.style.borderColor = 'rgba(77,200,255,0.7)';
     });
     el.addEventListener('mouseleave', () => {
       ring.style.width = '36px'; ring.style.height = '36px';
-      ring.style.borderColor = 'rgba(255,107,157,0.4)';
+      ring.style.borderColor = 'rgba(77,200,255,0.4)';
     });
   });
 
